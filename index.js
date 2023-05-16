@@ -10,8 +10,9 @@ app.use(cors());
 app.use(express.json())
 app.use("/api/blogs", router);
 PORT = process.env.PORT || 8001
-
-
+app.use('/',(req,res)=>{
+    res.status(200).json({msg:"welcome to blog api",author:"nithish"})
+})
 connectdb()
 .then(()=>{
     console.log('connected to db');
