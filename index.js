@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const router = require('./routes/Route')
+const router = require('./Routes/Route')
 const app = express()
 const bp = require('body-parser')
 app.use(bp.urlencoded({ extended: false }));
